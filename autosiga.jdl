@@ -1,0 +1,79 @@
+// Definición de roles (forma correcta para JHipster)
+enum RoleType {
+  SUPER_ADMIN,
+  ADMIN_NEGOCIO,
+  REGISTRO,
+  CAJA,
+  CLIENTE
+}
+
+entity User {
+  email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+  login String required unique
+  firstName String required
+  lastName String required
+  imageUrl String
+  activated Boolean
+  langKey String
+}
+
+entity Negocio {
+  nombre String required
+  rfc String
+  direccion String
+  telefono String required
+  email String required
+  fechaRegistro LocalDate
+  activo Boolean
+  suscripcionActiva Boolean
+}
+
+entity Cliente {
+  nombre String
+  telefono String required
+  email String
+  puntosLavadas Integer
+  fechaRegistro LocalDate
+}
+
+entity Vehiculo {
+  placas String required unique
+  marca String
+  modelo String
+  color String
+}
+
+entity Servicio {
+  nombre String required
+  descripcion String
+  precio BigDecimal required
+  duracion Integer
+  activo Boolean
+}
+
+entity Lavada {
+  fechaHora ZonedDateTime required
+  estado String required
+  precioFinal BigDecimal required
+  metodoPago String
+  pagoConfirmado Boolean
+}
+
+// Relaciones
+relationship ManyToOne {
+  User{negocio} to Negocio
+  Vehiculo{negocio} to Negocio
+  Cliente{negocio} to Negocio
+  Servicio{negocio} to Negocio
+  Lavada{negocio} to Negocio
+  Lavada{vehiculo} to Vehiculo
+  Lavada{servicio} to Servicio
+  Lavada{empleado} to User
+  Vehiculo{cliente} to Cliente
+}
+
+// Configuraciones
+paginate all with pagination
+service all with serviceClass
+dto all with mapstruct
+filter all
