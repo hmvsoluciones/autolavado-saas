@@ -1,0 +1,32 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "autolavadoSaas",
+    "buildTool": "maven",
+    "cacheProvider": "no",
+    "clientFramework": "vue",
+    "clientTestFrameworks": [],
+    "clientTheme": "none",
+    "creationTimestamp": 1754352675486,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "enableHibernateCache": null,
+    "enableTranslation": false,
+    "entities": [],
+    "feignClient": null,
+    "jhipsterVersion": "8.11.0",
+    "jwtSecretKey": "NzJhNmZiMTUwMGRkYTY1Nzg3Y2Q4ODQ3MGFhNjZmY2FkMGIyNjg5YmI5NTQ1NTU1MDczYWE2OTVmNTliNzNlZTMzZmQ1OTY3YzA5M2Y3NzY5OTA3NDg1YTA2ODI1ODcwNzY1Yzk5YjBmMTYzODZhZDQwMTE4NWJmNWM0NjU4YTY=",
+    "microfrontend": null,
+    "microfrontends": [],
+    "nativeLanguage": "es",
+    "packageName": "com.hmvsoluciones",
+    "prodDatabaseType": "postgresql",
+    "reactive": false,
+    "serverPort": null,
+    "serviceDiscoveryType": null,
+    "syncUserWithIdp": null,
+    "testFrameworks": [],
+    "withAdminUi": true
+  }
+}
