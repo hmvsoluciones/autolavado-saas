@@ -21,6 +21,9 @@ logging:
     com.hmvsoluciones: DEBUG
 
 spring:
+  docker:
+    compose:
+      enabled: false # Evita que Spring Boot intente gestionar Docker
   devtools:
     restart:
       enabled: true
