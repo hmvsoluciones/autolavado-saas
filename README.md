@@ -237,3 +237,11 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [NPM]: https://www.npmjs.com/
 [Leaflet]: https://leafletjs.com/
 [DefinitelyTyped]: https://definitelytyped.org/
+
+# Docker
+
+```sh
+docker compose -f postgresql.yml up -d
+
+docker compose -f src/main/docker/postgresql.yml up -d
+```
