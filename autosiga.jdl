@@ -1,79 +1,69 @@
-// Definición de roles (forma correcta para JHipster)
-enum RoleType {
-  SUPER_ADMIN,
-  ADMIN_NEGOCIO,
-  REGISTRO,
-  CAJA,
-  CLIENTE
-}
-
-entity User {
-  email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
-  login String required unique
-  firstName String required
-  lastName String required
-  imageUrl String
-  activated Boolean
-  langKey String
-}
-
-entity Negocio {
-  nombre String required
-  rfc String
-  direccion String
-  telefono String required
-  email String required
-  fechaRegistro LocalDate
-  activo Boolean
-  suscripcionActiva Boolean
-}
-
 entity Cliente {
-  nombre String
-  telefono String required
-  email String
-  puntosLavadas Integer
-  fechaRegistro LocalDate
-}
-
-entity Vehiculo {
-  placas String required unique
-  marca String
-  modelo String
-  color String
+	nombre String,
+    celular String
 }
 
 entity Servicio {
-  nombre String required
-  descripcion String
-  precio BigDecimal required
-  duracion Integer
-  activo Boolean
+	fecha LocalDate
 }
 
-entity Lavada {
-  fechaHora ZonedDateTime required
-  estado String required
-  precioFinal BigDecimal required
-  metodoPago String
-  pagoConfirmado Boolean
+entity Paquete {
+	nombre String,
+    descripcion String
+}
+entity DetallePaquete {
+	nombre String,
+    costo BigDecimal
+}
+ 
+entity TipoUnidad {
+	nombre String
 }
 
-// Relaciones
-relationship ManyToOne {
-  User{negocio} to Negocio
-  Vehiculo{negocio} to Negocio
-  Cliente{negocio} to Negocio
-  Servicio{negocio} to Negocio
-  Lavada{negocio} to Negocio
-  Lavada{vehiculo} to Vehiculo
-  Lavada{servicio} to Servicio
-  Lavada{empleado} to User
-  Vehiculo{cliente} to Cliente
+entity Lavador {
+	nombre String,
+    celular String
 }
 
-// Configuraciones
+entity Asistencia {
+	fecha LocalDate
+}
+
+entity Negocio {
+    nombre String,
+    responsable String,
+    celular String,
+    correo String,
+    subscriptionKey String
+	esActivo Boolean
+}
+
+// Relaciones mejoradas
+relationship OneToMany {
+  
+  Paquete to DetallePaquete
+  DetallePaquete to Servicio
+  
+  Lavador to Asistencia
+  Lavador to Servicio
+  
+  Cliente to Servicio
+  
+ 	TipoUnidad to DetallePaquete  
+}
+
+
+
+// Configuraciones para JHipster
 paginate all with pagination
 service all with serviceClass
 dto all with mapstruct
 filter all
+
+// Roles del sistema (se generarán automáticamente)
+enum RolAutolavado {
+  SUPER_ADMIN,
+  ADMIN,
+  REGISTRO,
+  CAJA
+}
