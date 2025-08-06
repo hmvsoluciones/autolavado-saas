@@ -1,63 +1,54 @@
 <template>
-  <b-footer class="jh-footer">
-    <b-container fluid class="jh-footer-container">
+  <footer class="jh-footer">
+    <div class="container-fluid jh-footer-container">
       <!-- Fila 1: Contenido principal -->
-      <b-row class="jh-footer-row justify-content-between">
+      <div class="row jh-footer-row justify-content-between">
         <!-- Columna 1 -->
-        <b-col lg="4" class="jh-footer-col mb-4 mb-lg-0">
+        <div class="col-lg-4 jh-footer-col mb-4 mb-lg-0">
           <h5 class="jh-footer-title">Autosiga</h5>
           <p class="jh-footer-text">Solución profesional para gestión de autolavados</p>
-        </b-col>
+        </div>
 
         <!-- Columna 2 -->
-        <b-col lg="4" class="jh-footer-col mb-4 mb-lg-0">
+        <div class="col-lg-4 jh-footer-col mb-4 mb-lg-0">
           <h5 class="jh-footer-title">Enlaces</h5>
           <div class="jh-footer-links">
-            <b-link href="#" class="jh-footer-link">
-              <b-icon icon="house-door" class="mr-2"></b-icon>
+            <a href="#" class="jh-footer-link d-flex align-items-center">
+              <font-awesome-icon icon="house" class="mr-2" />
               Inicio
-            </b-link>
-            <b-link href="#" class="jh-footer-link">
-              <b-icon icon="info-circle" class="mr-2"></b-icon>
-              Servicios
-            </b-link>
+            </a>
+            <a href="#" class="jh-footer-link d-flex align-items-center"> <font-awesome-icon :icon="['fas', 'house']" />Servicios </a>
           </div>
-        </b-col>
+        </div>
 
         <!-- Columna 3 -->
-        <b-col lg="4" class="jh-footer-col">
+        <div class="col-lg-4 jh-footer-col">
           <h5 class="jh-footer-title">Contacto</h5>
           <div class="jh-footer-contact">
-            <div class="jh-footer-contact-item">
-              <b-icon icon="telephone" class="mr-2"></b-icon>
-              +52 55 1234 5678
-            </div>
-            <div class="jh-footer-contact-item">
-              <b-icon icon="envelope" class="mr-2"></b-icon>
-              info@autolavado.com
-            </div>
+            <div class="jh-footer-contact-item d-flex align-items-center mb-2">+52 55 1234 5678</div>
+            <div class="jh-footer-contact-item d-flex align-items-center">info@autolavado.com</div>
           </div>
-        </b-col>
-      </b-row>
+        </div>
+      </div>
 
       <!-- Fila 2: Copyright -->
-      <b-row class="jh-footer-copyright-row">
-        <b-col class="text-center py-3">
+      <div class="row jh-footer-copyright-row">
+        <div class="col text-center py-3">
           <p class="jh-footer-copyright">
-            &copy; {{ currentYear }} Autosiga <a target="_blank" :href="jhiFooter.website">HMV Soluciones</a> Todos los derechos reservados.
+            &copy; {{ currentYear }} Autosiga<a target="_blank" :href="jhiFooter.website">HMV Soluciones</a> Todos los derechos reservados.
             version: {{ jhiFooter.version }}
           </p>
-        </b-col>
-      </b-row>
-    </b-container>
-  </b-footer>
+        </div>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <script lang="ts" src="./jhi-footer.component.ts"></script>
 
 <style scoped>
 .jh-footer {
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  background: linear-gradient(135deg, #fafafa, #e0f1e6);
   color: rgb(89, 89, 89);
   width: 100%;
   padding: 0 !important;
