@@ -15,14 +15,20 @@ import JhiSortIndicatorComponent from '@/shared/sort/jhi-sort-indicator.vue';
 import { useLoginModal } from '@/account/login-modal';
 import AccountService from '@/account/account.service';
 
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+
 import '../content/scss/global.scss';
 import '../content/scss/vendor.scss';
+import '../content/css/custom.css';
 
 const pinia = createPinia();
 
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 initBootstrapVue(Vue);
+
+Vue.use(BootstrapVue);
+Vue.use(IconsPlugin);
 
 Vue.configureCompat({
   MODE: 2,

@@ -1,8 +1,11 @@
 <template>
   <b-navbar data-cy="navbar" toggleable="md" type="dark" class="jh-navbar">
+    <b-button variant="outline-secondary" @click="$emit('toggle-sidebar')">
+      <font-awesome-icon icon="bars" />
+    </b-button>
     <b-navbar-brand class="logo" b-link to="/">
       <span class="logo-img"></span>
-      <span class="navbar-title">AutolavadoSaas</span> <span class="navbar-version">{{ version }}</span>
+      <span class="navbar-title">Autosiga</span> <span class="navbar-version">{{ version }}</span>
     </b-navbar-brand>
     <b-navbar-toggle
       right
@@ -23,6 +26,14 @@
             <font-awesome-icon icon="home" />
             <span>Inicio</span>
           </span>
+        </b-nav-item>
+        <b-nav-item to="/" exact-active-class="active">
+          <b-icon icon="speedometer2" class="mr-1"></b-icon>
+          Dashboard
+        </b-nav-item>
+        <b-nav-item to="/" exact>
+          <b-icon icon="calendar3" class="mr-2"></b-icon>
+          Servicios
         </b-nav-item>
         <b-nav-item-dropdown right id="entity-menu" v-if="authenticated" active-class="active" class="pointer" data-cy="entity">
           <template #button-content>
@@ -45,7 +56,7 @@
         >
           <template #button-content>
             <span class="navbar-dropdown-menu">
-              <font-awesome-icon icon="users-cog" />
+              <font-awesome-icon icon="users" />
               <span class="no-bold">Administración</span>
             </span>
           </template>
