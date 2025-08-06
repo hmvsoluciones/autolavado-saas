@@ -1,0 +1,265 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8faf5;
+  color: #2e3a2f;
+}
+
+/* ==========================================================================
+   Tablas
+   ========================================================================== */
+table.table {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.table thead {
+  background: linear-gradient(90deg, #9dc77c, #bddfa1);
+  color: #2e3a2f;
+  font-weight: 700;
+  font-size: 8px !important;
+  letter-spacing: 0.05em;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.table th,
+.table td {
+  padding: 16px 20px;
+  vertical-align: middle;
+  font-size: 15px;
+  border-bottom: 1px solid #e6ebdd;
+}
+
+.table tbody tr:hover {
+  background-color: #f0f7e9;
+  transition: background-color 0.3s ease;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #fbfdf9;
+}
+
+.table td:first-child a {
+  font-weight: bold;
+  color: #4c7c48;
+}
+.table td:first-child a:hover {
+  color: #6da35e;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Botones en tabla
+   ========================================================================== */
+.btn {
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.btn-info {
+  background-color: #4c7c48;
+  color: #fff;
+}
+.btn-info:hover {
+  background-color: #6da35e;
+}
+
+.btn-primary {
+  background-color: #bddfa1;
+  color: #2e3a2f;
+}
+.btn-primary:hover {
+  background-color: #9dc77c;
+}
+
+.btn-danger {
+  background-color: #e76f51;
+  color: #fff;
+}
+.btn-danger:hover {
+  background-color: #d94e32;
+}
+
+/* ==========================================================================
+   Etiquetas (Badges)
+   ========================================================================== */
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 6px;
+}
+
+.badge-role-admin {
+  background-color: #9dc77c;
+  color: #2e3a2f;
+}
+
+.badge-role-user {
+  background-color: #4c7c48;
+  color: #f1f8ed;
+}
+
+.badge-activated {
+  background-color: #7fb84e;
+  color: white;
+  border-radius: 20px;
+  padding: 6px 14px;
+  box-shadow: 0 1px 6px rgba(127, 184, 78, 0.4);
+}
+
+/* ==========================================================================
+   Paginación
+   ========================================================================== */
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.page-link {
+  border-radius: 30px;
+  padding: 8px 16px;
+  background-color: #bddfa1;
+  color: #2e3a2f;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(201, 226, 126, 0.5);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.page-link:hover {
+  background-color: #9dc77c;
+  transform: scale(1.05);
+}
+
+.page-item.active .page-link {
+  background-color: #7fb84e;
+  color: white;
+  box-shadow: 0 6px 18px rgba(127, 184, 78, 0.7);
+  transform: scale(1.1);
+}
+
+.page-item.disabled .page-link {
+  background-color: #d6e5b3;
+  color: #9aa47f;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+@media (max-width: 480px) {
+  .page-link {
+    padding: 6px 10px;
+    font-size: 0.875rem;
+  }
+}
+
+/* ==========================================================================
+   Formularios
+   ========================================================================== */
+form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+input.form-control,
+select.form-control,
+textarea.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+input.form-control:focus,
+select.form-control:focus,
+textarea.form-control:focus {
+  border-color: #bddfa1;
+  box-shadow: 0 0 0 0.2rem rgba(189, 223, 161, 0.4);
+}
+
+/* ==========================================================================
+   Alertas (tipo Toast)
+   ========================================================================== */
+.alert {
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  animation: fadeInDown 0.4s ease-out;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.alert-success {
+  background-color: #f6ffe6;
+  color: #395315;
+  border-left: 6px solid #bddfa1;
+}
+
+.alert-danger {
+  background-color: #ffeaea;
+  color: #8a1f1f;
+  border-left: 6px solid #e76f51;
+}
+
+.alert-warning {
+  background-color: #fff8e1;
+  color: #7f5800;
+  border-left: 6px solid #f4c430;
+}
+
+.alert-info {
+  background-color: #e7f4ff;
+  color: #155b8a;
+  border-left: 6px solid #2196f3;
+}
+
+.alert .close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+.alert .close:hover {
+  opacity: 1;
+}
+
+/* Animación de entrada */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

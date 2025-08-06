@@ -19,6 +19,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 
 import '../content/scss/global.scss';
 import '../content/scss/vendor.scss';
+import '../content/css/custom.css';
 
 const pinia = createPinia();
 
