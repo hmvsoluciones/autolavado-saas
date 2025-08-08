@@ -33,9 +33,9 @@ spring:
       enabled: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: ${DATA_SOURCE_URL:jdbc:postgresql://localhost:5432/autolavadoSaas}
-    username: ${DATA_SOURCE_USERNAME:autolavadoSaas}
-    password: ${DATA_SOURCE_CREDENTIAL}
+    url: jdbc:postgresql://localhost:5432/autolavadoSaas
+    username: autolavadoSaas
+    password:
     hikari:
       poolName: Hikari
       auto-commit: false
