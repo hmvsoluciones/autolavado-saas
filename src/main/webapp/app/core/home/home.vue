@@ -2,7 +2,7 @@
   <section class="home-section container py-5">
     <div class="row align-items-center mb-5">
       <div class="col-lg-6 text-center text-lg-start">
-        <h1 class="display-4 fw-bold text-primary">Bienvenido a ERP HMV Soluciones</h1>
+        <h1 class="display-4 fw-bold text-primary">Bienvenido a AutoSiga</h1>
         <p class="lead text-muted">Transformamos ideas en soluciones digitales efectivas. Este es tu panel de control inicial.</p>
 
         <div v-if="authenticated" class="alert alert-success mt-4">
@@ -20,12 +20,7 @@
       </div>
 
       <div class="col-lg-6 text-center">
-        <img
-          src="https://hmvsoluciones.com/hmv-assets/images/logo-white.png"
-          alt="Dashboard illustration"
-          class="img-fluid"
-          style="max-height: 300px"
-        />
+        <img src="/content/images/custom/logo.png" alt="Dashboard illustration" class="img-fluid" style="max-height: 300px" />
       </div>
     </div>
 
