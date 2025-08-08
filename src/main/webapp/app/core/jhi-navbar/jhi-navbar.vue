@@ -5,7 +5,7 @@
     </b-button>
     <b-navbar-brand class="logo" b-link to="/">
       <span class="logo-img"></span>
-      <span class="navbar-title">Autosiga</span> <span class="navbar-version">{{ version }}</span>
+      <span class="navbar-title">ERP HMV Soluciones</span> <span class="navbar-version">{{ version }}</span>
     </b-navbar-brand>
     <b-navbar-toggle
       right

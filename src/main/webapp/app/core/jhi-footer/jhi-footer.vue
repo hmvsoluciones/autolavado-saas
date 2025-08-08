@@ -35,8 +35,8 @@
       <div class="row jh-footer-copyright-row">
         <div class="col text-center py-3">
           <p class="jh-footer-copyright">
-            &copy; {{ currentYear }} Autosiga<a target="_blank" :href="jhiFooter.website">HMV Soluciones</a> Todos los derechos reservados.
-            version: {{ jhiFooter.version }}
+            &copy; {{ currentYear }} ERP HMV Soluciones<a target="_blank" :href="jhiFooter.website">HMV Soluciones</a> Todos los derechos
+            reservados. version: {{ jhiFooter.version }}
           </p>
         </div>
       </div>
